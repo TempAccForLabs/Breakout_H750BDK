@@ -1,0 +1,8 @@
+.settings/
+.metadata/
+.vscode/
+
+Debug/
+
+.DS_Store
+.launch
