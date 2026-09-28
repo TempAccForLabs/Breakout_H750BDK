@@ -7,6 +7,11 @@
 ## Purpose and Scope  
   
 This section provides a deep technical dive into the Breakout game engine implemented for the STM32H750B-DK discovery board. The engine is self-contained within `Core/Inc/game.h` and `Core/Src/game.c`. It replaces traditional retro arcade platforms with a lightweight, touch-driven Arkanoid clone that integrates directly into the main superloop through a function-pointer state machine and uses the Board Support Package (BSP) LCD utility library for rendering.  
+
+#### Credit:
+
+https://github.com/Klemen2/OR-Projekt/tree/main/Pacman
+https://github.com/AljazJus/Stm32H750B-DK_Minesweeper
   
 Sources: `Core/Inc/game.h`, `Core/Src/game.c`  
   
