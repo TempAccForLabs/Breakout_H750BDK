@@ -4,20 +4,6 @@
  * Original Breakout/Arkanoid-style game for the STM32H750B-DK.
  * See game.h for the integration contract with main.c.
  *
- * Design notes (so you can explain what you're submitting):
- *  - State machine via a function pointer (data->refresh), same
- *    dispatch pattern main.c's superloop already drives.
- *  - Ball motion is a plain integer velocity vector (vx, vy) reflected
- *    off walls/paddle/bricks — not a fixed-angle lookup table.
- *  - Paddle "English": where the ball hits the paddle (offset from
- *    paddle center) steers the rebound angle, standard arcade-breakout
- *    feel, implemented from scratch below.
- *  - No double buffering is set up by the board template, so drawing
- *    erases only the ball/paddle's *previous* rect before drawing the
- *    new one, instead of clearing the whole screen every frame.
- *  - This file only calls UTIL_LCD_* and reads fields off GameData —
- *    no direct HAL/BSP calls — so it doesn't care which board it's on
- *    beyond what main.c already resolved.
  */
 #include <stdlib.h>
 #include <string.h>
